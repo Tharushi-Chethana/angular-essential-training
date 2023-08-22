@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
+
 @Component({
   selector: 'app-midea-item',
   templateUrl: './midea-item.component.html',
@@ -7,7 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class MideaItemComponent {
 
-  @Input() MideaItem: any;
+  @Input() mideaItem: any;
   @Output() delete = new EventEmitter();
 
   name = 'Student';
@@ -16,6 +17,6 @@ export class MideaItemComponent {
   }
   onDelete(){
     console.log('deleted');
-    this.delete.emit(this.MideaItem);
+    this.delete.emit(this.mideaItem);
   }
 }
