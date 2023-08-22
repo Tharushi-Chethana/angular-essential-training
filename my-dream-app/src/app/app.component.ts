@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-dream-app';
+  firstMideaItem = {
+    id: 1,
+    name: 'Tharushi',
+    year: 2020
+  }
+
+  // onMideaItemDelete(mideaItem){}
 }
