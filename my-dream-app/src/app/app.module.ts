@@ -7,6 +7,8 @@ import { MideaItemComponent } from './midea-item/midea-item.component';
 import { MideaItemListComponent } from './midea-item-list/midea-item-list.component';
 import { FavoriteDirective } from './favorite.directives';
 import { CategoryListPipe } from './category-list.pipe';
+import { FormsModule } from '@angular/forms';
+import { MideaItemFormComponent } from './midea-item-form/midea-item-form.component';
 
 @NgModule({
   //declarations: used to make components, directives, and pipes that available 
@@ -15,11 +17,13 @@ import { CategoryListPipe } from './category-list.pipe';
     MideaItemComponent,
     MideaItemListComponent,
     FavoriteDirective,
-    CategoryListPipe
+    CategoryListPipe,
+    MideaItemFormComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

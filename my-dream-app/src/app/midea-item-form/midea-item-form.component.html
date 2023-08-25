@@ -1,0 +1,27 @@
+<header>
+    <h2>Add Media to watch</h2>
+</header>
+<form #mideaItemForm="ngForm"
+    (ngSubmit)="onSubmit(mideaItemForm)">
+    <ul>
+        <li>
+            <label for="mideam">Mideam</label>
+            <select name="mideam" id="mideam" ngModel>
+                <option value="Movies">Movies</option>
+                <option value="Series">Series</option>
+            </select>
+        </li>
+        <li>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" ngModel>
+        </li>
+        <li>
+            <label for="category">Category</label>
+            <select name="category" id="category" ngModel></select>
+                <option value="Action">Action</option>
+                <option value="Series">Series</option>
+                <option value="Drama">Drama</option>
+        </li>
+    </ul>
+    <button type=submit>Save</button>
+</form>
