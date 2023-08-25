@@ -1,6 +1,6 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{mideaItem.name}}</h5>
+    <h5 class="card-title" mwFavorite >{{mideaItem.name | uppercase}}</h5>
     <!--  or <h5 [textContent]="name"></h5> -->
     <ng-template [ngIf]="mideaItem.description">
       <p>{{mideaItem.description}}</p>

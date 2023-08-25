@@ -1,0 +1,9 @@
+<header>
+    <div>
+       {{mideaItems | categoryList}} 
+    </div>
+</header>
+<app-midea-item 
+    *ngFor="let mideaItem of mideaItems"
+    [mideaItem]="mideaItem">
+</app-midea-item>
