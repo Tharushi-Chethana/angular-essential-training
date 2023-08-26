@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { max } from 'rxjs';
+import { MideaItemService } from '../midea-item.service';
 
 @Component({
   selector: 'app-midea-item-form',
@@ -9,16 +10,20 @@ import { max } from 'rxjs';
 })
 export class MideaItemFormComponent implements OnInit {
 
-  form: FormGroup = new FormGroup({
-    mideam: new FormControl('Movies'),
+  form: FormGroup = this.formBuilder.group({
+    mideam: this.formBuilder.control('Movies'),
     //VALIDATION: BUILD IN
-    name: new FormControl('', Validators.compose([
+    name: this.formBuilder.control('', Validators.compose([
       Validators.required,
       Validators.pattern('[\\w\\-\\s\\/]+')
     ])),
-    category: new FormControl(''),
-    // year: new FormControl('', this.yearValidator),
+    category: this.formBuilder.control(''),
+    // year: this.formBuilder.control('', this.yearValidator),
   });
+
+  constructor(private formBuilder: FormBuilder, private mideaItemService: MideaItemService){
+
+  }
 
   ngOnInit(): void {
     // No need to initialize the form here again
@@ -43,7 +48,8 @@ export class MideaItemFormComponent implements OnInit {
   //   }
   // }
 
-  onSubmit(mideaItemForm: any) {
-    console.log(mideaItemForm);
+  onSubmit(mideaItem: any) {
+    console.log(mideaItem);
+    this.mideaItemService.add(mideaItem)
   }
 }
