@@ -7,7 +7,7 @@ import { MideaItemComponent } from './midea-item/midea-item.component';
 import { MideaItemListComponent } from './midea-item-list/midea-item-list.component';
 import { FavoriteDirective } from './favorite.directives';
 import { CategoryListPipe } from './category-list.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MideaItemFormComponent } from './midea-item-form/midea-item-form.component';
 
 @NgModule({
@@ -23,7 +23,8 @@ import { MideaItemFormComponent } from './midea-item-form/midea-item-form.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
