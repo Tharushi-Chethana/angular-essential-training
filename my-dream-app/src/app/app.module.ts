@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MideaItemFormComponent } from './midea-item-form/midea-item-form.component';
 import { lookupListToken, lookupLists } from './providers';
 
+
 // const lookupLists = {
 //   mediums: ['Movies', 'Series']
 // }
@@ -32,7 +33,7 @@ import { lookupListToken, lookupLists } from './providers';
     ReactiveFormsModule
   ],
   providers: [
-    {provide: 'lookupListToken', useValue: lookupLists}
+    {provide: 'lookupListToken', useValue: lookupLists},
   ],
   bootstrap: [AppComponent]
 })
