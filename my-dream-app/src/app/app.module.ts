@@ -9,6 +9,11 @@ import { FavoriteDirective } from './favorite.directives';
 import { CategoryListPipe } from './category-list.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MideaItemFormComponent } from './midea-item-form/midea-item-form.component';
+import { lookupListToken, lookupLists } from './providers';
+
+// const lookupLists = {
+//   mediums: ['Movies', 'Series']
+// }
 
 @NgModule({
   //declarations: used to make components, directives, and pipes that available 
@@ -26,7 +31,9 @@ import { MideaItemFormComponent } from './midea-item-form/midea-item-form.compon
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: 'lookupListToken', useValue: lookupLists}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
