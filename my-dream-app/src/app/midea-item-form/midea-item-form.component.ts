@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { max } from 'rxjs';
 import { MideaItemService } from '../midea-item.service';
-import { lookupListToken } from '../providers';
+// import { lookupListToken } from '../providers';
 
 @Component({
   selector: 'app-midea-item-form',
@@ -24,8 +24,9 @@ export class MideaItemFormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder, 
-    private mideaItemService: MideaItemService,
-    @Inject(lookupListToken) public lookupLists: any) {}
+    private mideaItemService: MideaItemService
+    // @Inject(lookupListToken) public lookupLists: any
+    ) {}
 
   ngOnInit(): void {
     // No need to initialize the form here again
